@@ -10,7 +10,9 @@ import streamlit as st
 from openai import OpenAI
 from PIL import Image
 
-from secret import SPARK_API_PASSWORD
+import streamlit as st
+
+SPARK_API_PASSWORD = st.secrets["SPARK_API_PASSWORD"]
 from knowledge_base import (
     kb_direct_answer, search_kb, append_learned_qa,
     classify_question, suggested_questions_by_mode
